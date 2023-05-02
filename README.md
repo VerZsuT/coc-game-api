@@ -5,7 +5,7 @@
 ## Installation
 
 ```cmd
-npm i coc-api --save
+npm i coc-game-api --save
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm i coc-api --save
 **Find clans by filters**
 
 ```js
-import { cocAPI, WarFrequency } from 'coc-api'
+import { cocAPI, WarFrequency } from 'coc-game-api'
 const { clans } = cocAPI(TOKEN)
 
 clans.findAll({
@@ -32,7 +32,7 @@ clans.findAll({
 **Get info about clan**
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { clans } = cocAPI(TOKEN)
 
 const clan = clans.getByTag(CLAN_TAG)
@@ -47,7 +47,7 @@ clan.getCapitalRaidSeasons().then(raidSeasons => {/*...*/})
 ### Clan war leagues
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { clanwarleagues } = cocAPI(TOKEN)
 
 clanwarleagues.getWarLeagueWar('war-tag').then(info => {/*...*/})
@@ -58,7 +58,7 @@ clanwarleagues.getWarLeagueWar('war-tag').then(info => {/*...*/})
 **Get info about player**
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { players } = cocAPI(TOKEN)
 
 players.getByTag(PLAYER_TAG).then(playerInfo => {/*...*/})
@@ -67,7 +67,7 @@ players.getByTag(PLAYER_TAG).then(playerInfo => {/*...*/})
 **Get info about player clan**
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { players } = cocAPI(TOKEN)
 
 players.getByTag(PLAYER_TAG).then(async playerInfo => {
@@ -79,7 +79,7 @@ players.getByTag(PLAYER_TAG).then(async playerInfo => {
 ### Leagues
 
 ```js
-import { cocAPI, LeagueID, CapitalLeagueID, WarLeagueID } from 'coc-api'
+import { cocAPI, LeagueID, CapitalLeagueID, WarLeagueID } from 'coc-game-api'
 const { leagues } = cocAPI(TOKEN)
 
 leagues.getLeagues().then(leagues => {/*...*/})
@@ -97,7 +97,7 @@ leagues.getWarLeague(WarLeague.Gold1).then(info => {/*...*/})
 ### Locations
 
 ```js
-import { cocAPI, LocationID } from 'coc-api'
+import { cocAPI, LocationID } from 'coc-game-api'
 const { locations } = cocAPI(TOKEN)
 
 locations.getList().then(list => {/*...*/})
@@ -114,7 +114,7 @@ location.getCapitalRankings().then(rankings => {/*...*/})
 ### Goldpass
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { goldpass } = cocAPI(TOKEN)
 
 goldpass.getCurrentSeason().then(info => {/*...*/})
@@ -123,7 +123,7 @@ goldpass.getCurrentSeason().then(info => {/*...*/})
 ### Labels
 
 ```js
-import { cocAPI } from 'coc-api'
+import { cocAPI } from 'coc-game-api'
 const { labels } = cocAPI(TOKEN)
 
 labels.getClanLabels().then(labels => {/*...*/})

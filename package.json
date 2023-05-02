@@ -1,8 +1,12 @@
 {
-  "name": "coc-api",
-  "version": "1.0.0",
+  "name": "coc-game-api",
+  "version": "1.0.1",
   "description": "Clash of Clans API",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VerZsuT/coc-api.git"
+  },
   "scripts": {
     "start": "npm run compile && node ./dist/test.js",
     "compile": "tsc"
