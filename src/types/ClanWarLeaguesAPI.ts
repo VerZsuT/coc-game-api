@@ -1,9 +1,9 @@
-import type ClanWarLeagueGroupExt from './ClanWarLeagueGroupExt'
+import type ClanWarExt from './ClanWarExt'
 import type ClanWarLeaguesRawAPI from './ClanWarLeaguesRawAPI'
 
 interface ClanWarLeaguesAPI {
   /** Retrieve information about individual clan war league war */
-  getWarLeagueWar(warTag: string): Promise<ClanWarLeagueGroupExt>
+  getWarLeagueWar(warTag: string): Promise<ClanWarExt>
   /** Raw requests */
   raw: ClanWarLeaguesRawAPI
 }

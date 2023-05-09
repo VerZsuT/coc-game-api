@@ -11,7 +11,7 @@ export function getFromAPI<T>(token: string, api: string, params: any = {}) {
       params
     }).then(responce => resolve(responce.data)).catch((reason: AxiosError) => {
       if (reason.response?.data) {
-        const data = reason.response as unknown as ClientError
+        const data = reason.response.data as unknown as ClientError
         const status = reason.response.status
         console.error(`Request error (${status})(${data.reason}): ${data.message}. URL: '${URL}'`)
         reject({
@@ -21,7 +21,7 @@ export function getFromAPI<T>(token: string, api: string, params: any = {}) {
         } satisfies RequestError)
       }
       else {
-        console.error(`Other request error`)
+        console.error(`Other request error. URL: '${URL}'`)
         reject({
           status: Number(reason.code),
           otherError: reason,

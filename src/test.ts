@@ -2,13 +2,13 @@ import cocAPI from './api'
 import { CapitalLeagueID, LeagueID, LocationID, WarLeagueID } from './enums'
 import type { FindClansOptions } from './types'
 
-const API_TOKEN = ''
+const API_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjdhMjk2YjZlLTA3MjYtNGY1Yi1iYWFhLTlkMDViZjg3OTc4NiIsImlhdCI6MTY4MjkyNjQ1MSwic3ViIjoiZGV2ZWxvcGVyL2Y5YTQwNDEwLTU0ZGUtNjZhZi03ZjZhLTYyODMxNjhmOWZhMyIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjEwOS4xOTcuMjA2LjkwIl0sInR5cGUiOiJjbGllbnQifV19.ILDdLj41FJ5nkzuIz63MO0hil2v6Rk9UpI4GSbr_8d3rmK1eDLSMzh4DtXEUqjahhmmVuTdWAbgHMBxJ-PhBKA'
 const CLAN_TAG = '#2QCCJCCLV'
 const PLAYER_TAG = '#Q928J0UVP'
 
 const api = cocAPI(API_TOKEN)
 
-testAll().catch(console.dir)
+testClanWarLeagues()
 
 async function testAll() {
   await Promise.all([
@@ -78,9 +78,10 @@ async function testGoldpass() {
 }
 
 async function testClanWarLeagues() {
+  const warTag = (await api.clans.getByTag(CLAN_TAG).getWarLeagueGroup()).rounds![0].warTags[0]
   await Promise.all([
-    testAPI(api.clanwarleagues.getWarLeagueWar, ''),
-    testAPI(api.clanwarleagues.raw.getWarLeagueWar, '')
+    testAPI(api.clanwarleagues.getWarLeagueWar, warTag),
+    testAPI(api.clanwarleagues.raw.getWarLeagueWar, warTag)
   ])
   console.log('Success test ClanWarLeagues API')
 }

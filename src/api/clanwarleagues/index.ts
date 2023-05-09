@@ -11,7 +11,8 @@ function getWarLeaguesAPI(token: string): ClanWarLeaguesAPI {
       const data = await getClanWarLeagueWar(token, warTag)
       return {
         ...data,
-        clans: data.clans.map(clan => clanHelpers.createClanExtObject(token, clan.tag, clan))
+        clan: clanHelpers.createClanExtObject(token, data.clan.tag, data.clan),
+        opponent: clanHelpers.createClanExtObject(token, data.opponent.tag, data.opponent)
       }
     }
   }

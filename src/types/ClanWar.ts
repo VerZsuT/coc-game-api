@@ -7,6 +7,7 @@ interface ClanWar {
   teamSize: number
   attacksPerMember: number
   startTime: string
+  warStartTime?: string
   state: ClanWarResult
   endTime: string
   preparationStartTime: string
