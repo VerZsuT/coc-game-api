@@ -8,7 +8,7 @@ enum ClanWarResult {
   Preparation = 'preparation',
   War = 'war',
   InWar = 'inWar',
-  Ended = 'ended'
+  Ended = 'warEnded'
 }
 
 export default ClanWarResult
