@@ -1,6 +1,5 @@
 import { getFromAPI, postToAPI } from '../../helpers';
-import type { PlayerInfo } from '../../types';
-import PlayerVerification from '../../types/PlayerVerification';
+import type { PlayerInfo, PlayerVerification } from '../../types';
 
 export function getPlayerInfo(token: string, playerTag: string) {
 	return getFromAPI<PlayerInfo>(
