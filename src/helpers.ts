@@ -6,7 +6,7 @@ let proxy: AxiosProxyConfig | undefined;
 
 export const setProxy = (value: AxiosProxyConfig) => (proxy = value);
 
-export function sendToAPI<T>(
+export function postToAPI<T>(
 	token: string,
 	api: string,
 	body: any = {},

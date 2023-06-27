@@ -1,4 +1,4 @@
-import { getFromAPI, sendToAPI } from '../../helpers';
+import { getFromAPI, postToAPI } from '../../helpers';
 import type { PlayerInfo } from '../../types';
 import PlayerVerification from '../../types/PlayerVerification';
 
@@ -14,7 +14,7 @@ export function verifyToken(
 	playerTag: string,
 	playerAPIToken: string
 ) {
-	return sendToAPI<PlayerVerification>(
+	return postToAPI<PlayerVerification>(
 		token,
 		`players/%23${playerTag.replace('#', '')}/verifytoken`,
 		{ token: playerAPIToken }
