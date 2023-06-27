@@ -1,9 +1,9 @@
 import type PlayerInfoExt from './PlayerInfoExt';
-import PlayerVerification from './PlayerVerification';
+import type PlayerVerification from './PlayerVerification';
 import type PlayersRawAPI from './PlayersRawAPI';
 
 interface PlayersAPI {
-	/** Verify an api tokane for a single player by tag */
+	/** Verify an api token for a single player by tag */
 	verifyToken(
 		playerTag: string,
 		playerAPIToken: string

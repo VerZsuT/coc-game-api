@@ -6,6 +6,8 @@ function getPlayersAPI(token: string): PlayersAPI {
 	return {
 		raw: {
 			getByTag: (tag) => getPlayerInfo(token, tag),
+			verifyToken: (tag, playerAPIToken) =>
+				verifyToken(token, tag, playerAPIToken),
 		},
 		async getByTag(tag) {
 			const data = await getPlayerInfo(token, tag);
