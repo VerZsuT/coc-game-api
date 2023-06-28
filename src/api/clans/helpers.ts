@@ -3,7 +3,7 @@ import type { Clan, ClanCapitalRaidSeason, ClanExt, ClanMember, ClanWar, ClanWar
 
 export function createClanExtObject<T extends object = Clan>(token: string, tag: string, values: T): ClanExt<T> {
   if (!tag) {
-    // @ts-ignore
+    // @ts-expect-error
     return values
   }
   const clanApi = getClanAPIURL(tag)
