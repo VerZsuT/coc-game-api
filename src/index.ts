@@ -52,10 +52,9 @@ export type {
   LegendSeasonResult, Location, LocationAPI,
   LocationExt, LocationsAPI, LocationsRawAPI, PlayerAchivement,
   PlayerClan, PlayerHouse, PlayerInfo, PlayerInfoExt,
-  PlayerItemLevel,
-  PlayerLegendStatistics, PlayerRanking,
+  PlayerItemLevel, PlayerLegendStatistics, PlayerRanking,
   PlayerRankingClan,
-  PlayerRankingExt, PlayerVersusRanking,
+  PlayerRankingExt, PlayerVerification, PlayerVersusRanking,
   PlayerVersusRankingExt, PlayersAPI, PlayersRawAPI, RequestError,
   WarClan,
   WarLeague

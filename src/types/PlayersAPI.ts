@@ -1,17 +1,17 @@
-import type PlayerInfoExt from './PlayerInfoExt';
-import type PlayerVerification from './PlayerVerification';
-import type PlayersRawAPI from './PlayersRawAPI';
+import type PlayerInfoExt from './PlayerInfoExt'
+import type PlayerVerification from './PlayerVerification'
+import type PlayersRawAPI from './PlayersRawAPI'
 
 interface PlayersAPI {
 	/** Verify an api token for a single player by tag */
 	verifyToken(
 		playerTag: string,
 		playerAPIToken: string
-	): Promise<PlayerVerification>;
+	): Promise<PlayerVerification>
 	/** Get information about a single player by player tag */
-	getByTag(playerTag: string): Promise<PlayerInfoExt>;
+	getByTag(playerTag: string): Promise<PlayerInfoExt>
 	/** Raw requests */
-	raw: PlayersRawAPI;
+	raw: PlayersRawAPI
 }
 
-export default PlayersAPI;
+export default PlayersAPI

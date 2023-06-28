@@ -1,11 +1,11 @@
-import { getFromAPI, postToAPI } from '../../helpers';
-import type { PlayerInfo, PlayerVerification } from '../../types';
+import { getFromAPI, postToAPI } from '../../helpers'
+import type { PlayerInfo, PlayerVerification } from '../../types'
 
 export function getPlayerInfo(token: string, playerTag: string) {
 	return getFromAPI<PlayerInfo>(
 		token,
 		`players/%23${playerTag.replace('#', '')}`
-	);
+	)
 }
 
 export function verifyToken(
@@ -17,5 +17,5 @@ export function verifyToken(
 		token,
 		`players/%23${playerTag.replace('#', '')}/verifytoken`,
 		{ token: playerAPIToken }
-	);
+	)
 }
