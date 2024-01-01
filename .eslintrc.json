@@ -22,7 +22,6 @@
             "warn",
             2
         ],
-        "no-tabs": "warn",
         "camelcase": "warn",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/ban-ts-comment": "off",

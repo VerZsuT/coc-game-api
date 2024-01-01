@@ -9,7 +9,7 @@ import type PlayerLegendStatistics from './PlayerLegendStatistics'
 
 interface PlayerInfo {
   league: League
-  clan: PlayerClan
+  clan?: PlayerClan
   role: ClanMemberRole
   warPreference: PlayerWarPreference
   attackWins: number
